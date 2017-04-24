@@ -33,4 +33,28 @@ class CirclesTests: XCTestCase {
         }
     }
     
+    
+    func testGrid(){
+    
+        let board = DrawingBoard()
+        let circle = Circle(x: 20, y: 15, radius: 20)
+        var grids = board.gridsForCircle(circle)
+        print(grids.keys)
+        
+        
+        circle.x = 100
+        circle.y = 150
+        circle.radius = 45
+        grids = board.gridsForCircle(circle)
+        print(grids.keys)
+        
+        
+        circle.x = 450
+        circle.y = 150
+        circle.radius = 45
+        grids = board.gridsForCircle(circle)
+        print(grids.keys)
+        
+    
+    }
 }

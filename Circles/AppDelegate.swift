@@ -18,6 +18,7 @@ class AppDelegate: NSObject, NSApplicationDelegate {
         // Insert code here to initialize your application
 //        let vc = MainViewController()
         window.contentViewController = MainViewController()
+        window.contentViewController?.view.autoresizingMask = [.viewHeightSizable, .viewWidthSizable]
     }
 
     func applicationWillTerminate(_ aNotification: Notification) {
